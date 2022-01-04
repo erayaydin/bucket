@@ -1,0 +1,22 @@
+{
+    "homepage": "http://qtpass.org/",
+    "version": "1.3.2",
+    "license": "GPL",
+    "url": "https://github.com/IJHack/QtPass/releases/download/v1.3.2/qtpass-1.3.2.exe",
+    "shortcuts": [
+        "Compil32.exe"
+    ],
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/DIR=\"$dir\"",
+            "/NORESTART"
+        ]
+    },
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/VERYSILENT"
+        ]
+    }
+}
