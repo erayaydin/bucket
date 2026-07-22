@@ -1,0 +1,20 @@
+name: Update
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  excavate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'
